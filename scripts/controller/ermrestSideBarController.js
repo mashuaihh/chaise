@@ -29,6 +29,7 @@ ermSideBarController.controller('SideBarCtrl', ['$scope', '$filter', '$timeout',
 			$scope.FacetsData.facetPreviousValues['max'] = $scope.FacetsData.box[tag['table']][tag['name']]['max'];
 
 			// Replaces hyphens with forward slashes in dates so Angular-Datepicker will display default date correctly
+			// Only a visual effect; underlying data is still correct despite the datepicker displaying incorrect date.
 			this.formatDefaultDatepickerDate = function formatDefaultDatepickerDate(date) {
 				return date.replace(/-/g, '/');
 			}
