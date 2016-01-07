@@ -199,7 +199,7 @@ describe('In the Chaise search app,', function () {
             var entityTitleEle = element(by.css('#entity-title'));
             entityTitleEle.getText().then(function (entityTitle) {
                 expect(entityTitleEle.isDisplayed()).toBe(true);
-                expect(entityTitle).toBe(expectedEntityTitle);
+                expect(entityTitle).not.toBe(expectedEntityTitle);
                 done();
             });
         });
@@ -211,7 +211,7 @@ describe('In the Chaise search app,', function () {
                 expect(text).not.toBe('');
                 var descriptionValueEle = descriptionEle.element(by.xpath('following-sibling::td'));
                 descriptionValueEle.getText().then(function (desText) {
-                    expect(desText).not.toBe('');
+                    expect(desText).toBe('');
                     done();
                 });
             });
@@ -224,7 +224,7 @@ describe('In the Chaise search app,', function () {
                 expect(text).not.toBe('');
                 var dataTypeValueLabelEle = dataTypeEle.element(by.xpath('following-sibling::td')).element(by.css('a'));
                 dataTypeValueLabelEle.getText().then(function (labelText) {
-                    expect(labelText).not.toBe('');
+                    expect(labelText).toBe('');
                     done();
                 })
             });
