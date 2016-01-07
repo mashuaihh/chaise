@@ -17,8 +17,6 @@ UNIT=$(BIN)/mocha
 
 # Protractor scripts
 E2E=test/e2e/search/protractor.conf.js \
-	test/e2e/record/protractor.conf.js \
-	test/e2e/login/protractor.conf.js
 
 # Rule to determine MD5 utility
 ifeq ($(shell which md5 2>/dev/null),)
