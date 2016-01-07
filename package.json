@@ -8,7 +8,7 @@
   "scripts": {
     "build": "make build",
     "pretest": "make build",
-    "test": "make test",
+    "test": "protractor ./test/e2e/search/*.conf.js && protractor ./test/e2e/record/*.conf.js",
     "test:testem": "make testem",
     "docs": "make doc"
   },
