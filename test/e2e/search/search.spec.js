@@ -12,11 +12,13 @@ describe('In the Chaise search app,', function () {
             //so icon can be tested before everything settles down(settling down means img is no longer there)
             browser.ignoreSynchronization = true;
             var spinner = element(by.id('spinner'));
+            expect(spinner.isDisplayed()).toBe(true);
+            done();
             // Browser waits (up to 500ms) for spinner to become visible before continuing
-            browser.wait(EC.visibilityOf(spinner), 10000).then(function () {
-                expect(spinner.isDisplayed()).toBe(true);
-                done();
-            });
+            //browser.wait(EC.visibilityOf(spinner), 10000).then(function () {
+            //    expect(spinner.isDisplayed()).toBe(true);
+            //    done();
+            //});
         });
 
         it('should open the initial sidebar', function (done) {
