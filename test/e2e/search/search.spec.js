@@ -9,7 +9,7 @@ describe('In the Chaise search app,', function () {
         it('should show the spinner', function (done) {
             var spinner = element(by.id('spinner'));
             // Browser waits (up to 500ms) for spinner to become visible before continuing
-            browser.wait(EC.visibilityOf(spinner), 500).then(function () {
+            browser.wait(EC.visibilityOf(spinner), 10000).then(function () {
                 expect(spinner.isDisplayed()).toBe(true);
                 done();
             });
@@ -245,7 +245,7 @@ describe('In the Chaise search app,', function () {
                 var UrlEle = firstRowKeyArray.last();
                 UrlEle.element(by.css('a')).getAttribute('href').then(function (linkText) {
                     expect(firstRow.isDisplayed()).toBe(true);
-                    expect(firstRowKeyArray.count()).toBe(4);
+                    expect(firstRowKeyArray.count()).toBe(3);
                     expect(linkText).toContain('http');
                     done();
                 });
