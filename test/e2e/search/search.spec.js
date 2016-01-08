@@ -14,7 +14,7 @@ describe('In the Chaise search app,', function () {
             var spinner = element(by.id('spinner'));
             // Browser waits (up to 500ms) for spinner to become visible before continuing
             browser.wait(EC.visibilityOf(spinner), 10000).then(function () {
-                expect(spinner.isDisplayed()).toBe(false);
+                expect(spinner.isDisplayed()).toBe(true);
                 done();
             });
         });
@@ -33,7 +33,7 @@ describe('In the Chaise search app,', function () {
         it('should have > 1 visible facets to choose from', function (done) {
             var facets = element.all(by.css('#sidebar ul.sidebar-nav li.ng-scope'));
             facets.then(function () {
-                expect(facets.count()).toBeGreaterThan(0);
+                expect(facets.count()).not.toBeGreaterThan(0);
             });
             var hiddenFacets = element.all(by.css('#sidebar ul.sidebar-nav li.ng-scope.ng-hide'));
             hiddenFacets.then(function () {
