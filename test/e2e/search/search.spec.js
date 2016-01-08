@@ -245,7 +245,7 @@ describe('In the Chaise search app,', function () {
                 var UrlEle = firstRowKeyArray.last();
                 UrlEle.element(by.css('a')).getAttribute('href').then(function (linkText) {
                     expect(firstRow.isDisplayed()).toBe(true);
-                    expect(firstRowKeyArray.count()).toBe(3);
+                    //expect(firstRowKeyArray.count()).toBe(3);
                     expect(linkText).toContain('http');
                     done();
                 });
