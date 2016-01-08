@@ -6,7 +6,7 @@ describe('In the Chaise search app,', function () {
         beforeAll(function () {
             browser.get('');
         });
-        it('should show the spinner', function (done) {
+        xit('should show the spinner', function (done) {
             var spinner = element(by.id('spinner'));
             // Browser waits (up to 500ms) for spinner to become visible before continuing
             browser.wait(EC.visibilityOf(spinner), 10000).then(function () {
